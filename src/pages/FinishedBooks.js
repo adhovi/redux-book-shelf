@@ -14,7 +14,9 @@ const FinishedBooks = () => {
   return (
     <PageLayout>
       {books?.length ? (
-        books?.map((book) => <Book key={book.id} book={book} button={button} />)
+        books?.map((book) => (
+          <Book key={book._id} book={book} button={button} />
+        ))
       ) : (
         <p>
           Hey there! This is where books will go when you've finished reading
